@@ -1,7 +1,7 @@
 # Ex.No:2(D) MULTI-DIMENSIONAL ARRAY
 
 ## AIM:
-To create a java program that returns the sum of all the values in a 2D array.
+To create a java program that returns the sum of all the even values in a 2D array.
 
 ## ALGORITHM :
 1.	Start the program.
@@ -22,24 +22,48 @@ To create a java program that returns the sum of all the values in a 2D array.
  ```
 /*
 Program to implement a Multi Dimensional Array using Java
-Developed by: 
-RegisterNumber:  
+Developed by: VINOD KUMAR S
+RegisterNumber: 21222240116
 */
 ```
 
 ## Sourcecode.java:
 
+```JAVA
+import java.util.Scanner;
 
+public class SumOfEvens1 {
+	private static Scanner sc;
+	public static void main(String[] args) 
+	{
+		int Size, i, EvenSum = 0;
+		sc = new Scanner(System.in);
+	 
+	
+		Size = sc.nextInt();	
+		
+		int [] a = new int[Size];
+		
+		
+		for (i = 0; i < Size; i++)
+		{
+			a[i] = sc.nextInt();
+		}   
 
-
-
-
-
+		for(i = 0; i < Size; i++)
+		{
+			if(a[i] % 2 == 0)
+			{
+				EvenSum = EvenSum + a[i]; 
+			}
+		}		
+		System.out.println("The Sum of Even Numbers in this Array = " + EvenSum);
+	}
+}
+```
 ## OUTPUT:
-
-
-
+![image](https://github.com/user-attachments/assets/3e4fda48-437f-4f56-ac43-ac91910aa8f6)
 ## RESULT:
-Thus the java program that returns the sum of all the values in a 2D array was executed successfully.
+Thus the java program that returns the sum of all the even values in a 2D array was executed successfully.
 
 
