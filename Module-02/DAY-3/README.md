@@ -1,50 +1,68 @@
 # Ex.No:2(C)    SINGLE ARRAY
 
 ## AIM:
-To develop a Java Program to sort the elements of an array in ascending order.
+To create a java program to read 3 values and display the all 3 values from array using single dimensional array.
 
 ## ALGORITHM :
+1.	Start the program.
+2.	2.	Import the `Scanner` class from the `java.util` package
+3.	Define a class named `ArrayExample`
+4.	Inside the `main` method:
+-	a) Create a `Scanner` object called `scanner` to take user input
+-	b) Declare an integer array `values` of size 3
+-	c) Use a `for` loop to iterate from `i = 0` to `i < 3`:
+-   d) Take input from the user and store it in `values[i]`
+5.	Print "Elements in Array are :"
+6.	Use another `for` loop to iterate from `i = 0` to `i < 3`:
+-	a) Print each element in `values` followed by a space
+7.	Close the `scanner` to release resources
+8.	End
 
-1. Start the program and read the length of the array.
-2. Declare an integer array of the given length.
-3. Use a loop to read elements into the array from the user.
-4. Sort the array using the `Arrays.sort()` method.
-5. Print the sorted array elements.
+
+
+
 
 ## PROGRAM:
  ```
 /*
 Program to implement a Single Array using Java
 Developed by: VINOD KUMAR S
-RegisterNumber: 212222401116 
+RegisterNumber:  212222240116
 */
 ```
+
 ## Sourcecode.java:
-``` JAVA
+```
 import java.util.*;
-public class Main{
-    public static void main(String args[]){
-        Scanner scan = new Scanner(System.in);
-        int len = scan.nextInt();
-        int  arr[] = new int[len];
-        for(int ind = 0;ind<len;ind++){
-            arr[ind] = scan.nextInt();
+public class ArrayExample{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[3];
+        System.out.println("One dimensional array elements are");
+        for(int i=0;i<arr.length;i++)
+        {
+            arr[i]=sc.nextInt();
         }
-         
-         Arrays.sort(arr);
-         System.out.println("Result of a Sorted Array :");
-        for(int ind=0;ind<len;ind++){
-            System.out.print(arr[ind]+"  ");
+        for(int i=0;i<arr.length;i++)
+        {
+            System.out.println(+arr[i]);
         }
+
     }
 }
 ```
 
 
+
+
+
+
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/e35d4fca-be1d-4a0c-9cea-298ed647683b)
+![image](https://github.com/user-attachments/assets/36820e51-bdef-4a59-bad7-28707a815113)
+
+
 
 ## RESULT:
-Thus, the Java program Thus the java program to to sort the elements of an array in ascending order  was executed successfully.
+Thus, the Java program Thus the java program to read 3 values and display the all 3 values from array using single dimensional  was executed successfully.
 
 
