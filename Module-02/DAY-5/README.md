@@ -1,56 +1,24 @@
-# Ex.No:4(E)  PARAMETERIZED CONSTRUCTOR
+# Ex.No:2(E)  SMALLEST ELEMENT IN AN ARRAY
+
 ## AIM:
-To write a parameterized constructor in the Laptop class given below that initializes the brand , price class field with the string "Apple" and 42500.75.
-
-Call the getBrand() method in the main method of the Sample class  and store the value of the brand in a variable, and print the value.
-
-Call the getPrice() method in the main method of the Sample class  and store the value of the price in a variable, and print the value.
+To write a Write a Java program to find the smallest and second smallest elements of a given array.
 
 ## ALGORITHM :
-
-1. Start
-
-2. Define class Laptop:
-
-    Declare a String variable brand.
-    
-    Declare a double variable price.
-    
-    Create a constructor Laptop():
-    
-    Set brand to "Apple".
-    
-    Set price to 42500.75.
-
-3. Define a method getBrand():
-
-    Return the value of brand.
-    
-    Define a method getPrice():
-    
-    Return the value of price.
-
-4. Define class Sample:
-
-    In the main method:
-    
-        Create an object myLaptop of class Laptop.
-        
-        Call getBrand() method using myLaptop and store the result in laptopBrand.
-        
-        Print laptopBrand.
-        
-        Call getPrice() method using myLaptop and store the result in laptopPrice.
-        
-        Print laptopPrice.
-
-5. End
-
+1.	Input array size (size).
+2.	If size < 2, print error and exit.
+3.	Input size elements into the array.
+4.	Initialize smallest and secondSmallest to Integer.MAX_VALUE.
+5.	Loop through the array:
+           i) Update smallest and secondSmallest as needed.
+6.	If secondSmallest == Integer.MAX_VALUE, print error.
+7.	Else, print smallest and secondSmallest.
+8.	End the program.
+	
 
 ## PROGRAM:
  ```
 /*
-Program to implement a Parameterized Constructor Using Java
+Program to implement a Smallest Element in an Array
 Developed by: VINOD KUMAR S
 RegisterNumber: 212222240116
 */
@@ -58,40 +26,60 @@ RegisterNumber: 212222240116
 
 ## Sourcecode.java:
 
-```JAVA
-class Laptop {
-    String brand;
-    double price;
-    public Laptop() {
-        this.brand = "Apple";
-        this.price = 42500.75;
-    }
+```
+import java.util.Scanner;
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-}
-public class Sample {
+public class SmallestElements {
     public static void main(String[] args) {
-        Laptop myLaptop = new Laptop();
-        String laptopBrand = myLaptop.getBrand();
-        System.out.println(laptopBrand);
-        double laptopPrice = myLaptop.getPrice();
-        System.out.println(laptopPrice);
+        Scanner scanner = new Scanner(System.in);
+
+        int size = scanner.nextInt();
+        
+        if (size < 2) {
+            System.out.println("Array should have at least two elements.");
+            return;
+        }
+
+        int[] array = new int[size];
+
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
+
+        for (int i = 0; i < size; i++) {
+            if (array[i] < smallest) {
+                secondSmallest = smallest;
+                smallest = array[i];
+            } else if (array[i] < secondSmallest && array[i] != smallest) {
+                secondSmallest = array[i];
+            }
+        }
+
+        if (secondSmallest == Integer.MAX_VALUE) {
+            System.out.println("There is no second smallest element.");
+        } else {
+            System.out.println("Smallest element: " + smallest);
+            System.out.println("Second smallest element: " + secondSmallest);
+        }
     }
 }
 ```
-## OUTPUT:
 
-![image](https://github.com/user-attachments/assets/dd258499-d8e9-427a-97a0-9157d4055a30)
+
+
+
+
+## OUTPUT:
+![image](https://github.com/user-attachments/assets/afce41fe-6a77-4675-8d36-d22255d42953)
+
 
 
 ## RESULT:
-Thus, the  java program was successfully parameterized constructor in the Laptop class given below that initializes the brand , price class field with the string "Apple" and 42500.75.
+Thus the java program successfully reads the array size and elements from the user and correctly finds and prints the smallest number in the array.
 
- 
+
+
 
