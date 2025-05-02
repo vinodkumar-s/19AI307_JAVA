@@ -1,7 +1,7 @@
 # Ex.No:2(D) MULTI-DIMENSIONAL ARRAY
 
 ## AIM:
-To create a java program that returns the sum of all the even values in a 2D array.
+To create a java program that returns the sum of all the values in a 2D array.
 
 ## ALGORITHM :
 1.	Start the program.
@@ -23,47 +23,48 @@ To create a java program that returns the sum of all the even values in a 2D arr
 /*
 Program to implement a Multi Dimensional Array using Java
 Developed by: VINOD KUMAR S
-RegisterNumber: 21222240116
+RegisterNumber:  212222240116
 */
 ```
 
 ## Sourcecode.java:
 
-```JAVA
-import java.util.Scanner;
-
-public class SumOfEvens1 {
-	private static Scanner sc;
-	public static void main(String[] args) 
-	{
-		int Size, i, EvenSum = 0;
-		sc = new Scanner(System.in);
-	 
-	
-		Size = sc.nextInt();	
-		
-		int [] a = new int[Size];
-		
-		
-		for (i = 0; i < Size; i++)
-		{
-			a[i] = sc.nextInt();
-		}   
-
-		for(i = 0; i < Size; i++)
-		{
-			if(a[i] % 2 == 0)
-			{
-				EvenSum = EvenSum + a[i]; 
-			}
-		}		
-		System.out.println("The Sum of Even Numbers in this Array = " + EvenSum);
-	}
-}
 ```
+public class Main
+{
+    public static void sum(int[][] arr)
+    {
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++)
+        {
+            for(int j = 0; j < arr[0].length; j++)
+            {
+                sum = sum + arr[i][j];
+            }
+        }
+        System.out.print("Sum of all elements is: " + sum);
+    }
+    public static void main(String[] args)
+    {
+        int[][] arr = {
+                {1, 2, 3, 4, 5},
+                {2, 4, 6, 8, 10},
+                {1, 3, 5, 7, 9}
+        };
+        sum(arr);
+    }
+}
+
+```
+
+
+
 ## OUTPUT:
-![image](https://github.com/user-attachments/assets/3e4fda48-437f-4f56-ac43-ac91910aa8f6)
+
+![image](https://github.com/user-attachments/assets/a122c894-be43-4f88-9bdf-46ed81aa0266)
+
+
 ## RESULT:
-Thus the java program that returns the sum of all the even values in a 2D array was executed successfully.
+Thus the java program that returns the sum of all the values in a 2D array was executed successfully.
 
 
