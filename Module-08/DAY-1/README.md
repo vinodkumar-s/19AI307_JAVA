@@ -1,37 +1,48 @@
 # Ex.No:8(A)           IO-FILE STREAM
 ## AIM:
-To implement a Java Program to write a String in a file "testout.txt" using FileOutputStream
+To implement a Java Program to append a String "SAVEETHA ENGINEERING COLLEGE" in a file "sample.txt" using OutputStream.
 
 ## ALGORITHM :
-1.  Define the string "Welcome to Saveetha" and convert it to a byte array b using getBytes().
-2.	Use Scanner to prompt the user for start (starting index) and length (number of bytes) to write from the string.
-3.	Open testout.txt using FileOutputStream, and write the specified portion of b from the start index for length bytes, then close the output stream.
-4.	Open testout.txt using FileInputStream, read its contents byte-by-byte, convert each byte to a character, and print it to display the file's content.
-5.	Use file.delete() to delete testout.txt.
-6.	Attempt to read the deleted file, which triggers a FileNotFoundException as the file no longer exists.
+1.  Define the string str as "SAVEETHA ENGINEERING COLLEGE" and convert it into a byte array b using getBytes().
+2.	Open the file sample.txt using FileOutputStream with the append flag set to true to enable appending.
+3. Write the entire byte array b to the file.
+4.	Close the output stream.
+5.	Open the file sample.txt using FileInputStream.
+6. Read the contents of the file byte-by-byte, convert each byte to a character, and display the file's content.
+
+7.Close the input stream.
 
 
 ## PROGRAM:
  ```
 /*
 Program to implement a IO File Stream using Java
-Developed by: 
-RegisterNumber:  
+Developed by: VINOD KUMAR S
+RegisterNumber: 212222240116 
 */
 ```
 
 ## Sourcecode.java:
-
-
-
-
-
-
+```
+ try
+   {
+      FileOutputStream f=new FileOutputStream("sample.txt",true);
+      String s="SAVEETHA ENGINEERING COLLEGE";
+      byte b[]=s.getBytes();
+      f.write(b);
+      f.close();
+      System.out.println("Successfully Completed");
+   }
+      catch(Exception e){
+           System.out.println(e);
+   }
+```
 
 ## OUTPUT:
 
+![image](https://github.com/user-attachments/assets/7f90dae3-b88e-4649-8548-d062775a89cb)
 
 
 ## RESULT:
-Thus the implementation of a Java Program to write a String in a file "testout.txt" using FileOutputStream was executed and verified successfully
+Thus, the implementation of a Java Program to append a String "SAVEETHA ENGINEERING COLLEGE" in a file "sample.txt" using OutputStream was executed and verified successfully.
 
