@@ -20,25 +20,47 @@
  ```
 /*
 Program to implement a JAVA HASHSET & LINKEDHASHSET using Java
-Developed by: 
-RegisterNumber:  
+Developed by: VINOD KUMAR S
+RegisterNumber: 212222240116
 */
 ```
 
 ## Sourcecode.java:
 
+```JAVA
+import java.util.*;
 
+public class HashSetDemo{
 
+public static void main(String args[]){
 
+HashSet <String> hs = new HashSet <String>();
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+for(int i=0;i<n;i++)
+{
+    
+hs.add(sc.next());
 
+}
+ Iterator<String> i=hs.iterator();  
+ while(i.hasNext())  
+ {  
+    System.out.println(i.next());  
+ }  
 
+}
+}
+```
 
 ## OUTPUT:
+
+
+![image](https://github.com/user-attachments/assets/d8cd2c9a-7b12-4e38-bebf-0f5e86f14345)
 
 
 
 ## RESULT:
 Thus the java program of hashmap concepts was executed and verified successfully.
-
 
 
